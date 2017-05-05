@@ -1,0 +1,15 @@
+html {
+
+  @include font($font-normal);
+  line-height: 1.6;
+  -ms-text-size-adjust:100%;
+  -webkit-text-size-adjust: 100%;
+
+}
+
+
+body {
+
+  margin:0;
+  background: $secondary;
+}
