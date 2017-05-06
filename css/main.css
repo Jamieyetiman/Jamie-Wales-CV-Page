@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:300");
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -19,6 +18,31 @@ body {
       width: 95%;
       max-width: 1200px;
       margin: 0 auto; }
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0 0 .75em; }
+
+h1:last-child, h2:last-child, h3:last-child, h4:last-child,
+h5:last-child, h6:last-child, p:last-child {
+  margin: 0; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  text-transform: uppercase; }
+
+p {
+  font-size: 1.2rem; }
+
+.text-intro {
+  font-size: 2rem; }
+
+.title-large {
+  font-size: 5rem;
+  font-weight: 900; }
+  .title-large span {
+    font-weight: 300; }
 
 .main-header {
   position: absolute;
