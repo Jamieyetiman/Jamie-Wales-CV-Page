@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300");
 html {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -11,19 +12,42 @@ body {
 
 *, *::before, *::after {
   box-sizing: border-box; }
+  * img, *::before img, *::after img {
+    max-width: 100%;
+    height: auto; }
+    * img .container, *::before img .container, *::after img .container {
+      width: 95%;
+      max-width: 1200px;
+      margin: 0 auto; }
 
-.mainheader {
+.main-header {
   position: absolute;
-  top: 0;
+  top: 1em;
   left: 0;
-  right: 0;
-  bottom: 0; }
+  right: 0; }
+
+.mylogo {
+  width: 25%;
+  min-width: 10rem;
+  max-width: 15rem; }
+
+.main-nav {
+  display: none; }
 
 .hero {
-  background: linear-gradient(rgba(146, 114, 159, 0.75), rgba(194, 6, 147, 0.55)), url("/img/Heroimage.jpg");
+  background: linear-gradient(rgba(146, 114, 159, 0.85), rgba(117, 92, 128, 0.15)), url("/img/Heroimage.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
-  padding-top: 10em;
-  padding-bottom: 20em; }
+  position: inherit;
+  padding-top: 20em;
+  padding-bottom: 20em;
+  text-align: center;
+  color: white; }
+  .hero .hero-img {
+    display: none; }
+
+.grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
