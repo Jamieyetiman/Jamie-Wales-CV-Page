@@ -8,6 +8,8 @@
 
   overflow: hidden
 
+  transition: all ease-in-out 300ms
+
 ul
   display: flex
   flex-direction: column
@@ -21,9 +23,22 @@ li
     align-items: center
     justify-content: center
 
+
 a
   color: white
   text-decoration: none
+  flex-basis: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+  &:hover
+    background: rgba(0, 0, 0, 0.1)
+
+.is-open
+    left: 0
+
+
 
 .nav-toggle
   display: block
@@ -33,6 +48,7 @@ a
   top: 1em
   cursor: pointer
 
+
 .hamburger, .hamburger::before, .hamburger::after
   content: ''
   display: block
@@ -40,8 +56,21 @@ a
   height: 3px
   background: black
 
+
+  transition: all ease-in-out 500ms
+
 .hamburger::before,
     transform: translateY(-6px)
 
 .hamburger::after,
     transform: translateY(3px)
+
+.hamburger.is-open
+    transform: rotate(45deg)
+
+    &::after
+      transform: rotate(90deg) translateX(-3px)
+
+
+    &::before
+      opacity: 0

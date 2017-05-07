@@ -99,7 +99,8 @@ p {
   right: 0;
   left: 100%;
   font-size: 6rem;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all ease-in-out 300ms; }
 
 ul {
   display: -webkit-flex;
@@ -130,7 +131,24 @@ li {
 
 a {
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  a:hover {
+    background: rgba(0, 0, 0, 0.1); }
+
+.is-open {
+  left: 0; }
 
 .nav-toggle {
   display: block;
@@ -145,7 +163,8 @@ a {
   display: block;
   width: 2em;
   height: 3px;
-  background: black; }
+  background: black;
+  transition: all ease-in-out 500ms; }
 
 .hamburger::before {
   -webkit-transform: translateY(-6px);
@@ -156,6 +175,17 @@ a {
   -webkit-transform: translateY(3px);
   -ms-transform: translateY(3px);
   transform: translateY(3px); }
+
+.hamburger.is-open {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .hamburger.is-open::after {
+    -webkit-transform: rotate(90deg) translateX(-3px);
+    -ms-transform: rotate(90deg) translateX(-3px);
+    transform: rotate(90deg) translateX(-3px); }
+  .hamburger.is-open::before {
+    opacity: 0; }
 
 .btn {
   font-family: "Gloria Hallelujah", cursive, sans-serif;
