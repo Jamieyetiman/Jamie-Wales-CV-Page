@@ -277,6 +277,9 @@ p {
   background: black;
   color: white;
   padding: 8em; }
+  @media (min-width: 495px) {
+    .promo .bg-primary {
+      padding-top: 8rem; } }
 
 .promo .img-box {
   background: url("/img/sideimage.jpg");
@@ -316,12 +319,14 @@ footer {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  opacity: 0.9;
-  width: 110%; }
+  opacity: 0.9; }
 
 a {
   text-decoration: none;
   color: white; }
+
+.container--footer {
+  max-width: 25em; }
 
 .btn {
   font-family: "Gloria Hallelujah", cursive, sans-serif;
@@ -357,4 +362,25 @@ a {
   position: relative; }
   @media (min-width: 725px) {
     .CTA {
-      padding: 10em 0; } }
+      padding: 10em 0; }
+      .CTA::before, .CTA::after {
+        content: '';
+        display: block;
+        background: #8d0085;
+        position: absolute;
+        width: 100%;
+        border: solid 1px white; }
+      .CTA::before {
+        top: 0;
+        bottom: 0;
+        -webkit-transform: skewX(45deg);
+        -ms-transform: skewX(45deg);
+        transform: skewX(45deg);
+        left: -100%; }
+      .CTA::after {
+        top: 0;
+        bottom: 0;
+        -webkit-transform: skewX(45deg);
+        -ms-transform: skewX(45deg);
+        transform: skewX(45deg);
+        right: -100%; } }

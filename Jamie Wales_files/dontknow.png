@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>404 - Not found</title>
+    <link rel="stylesheet" href="http://localhost:7879/__prepros-server__/css/server.css" />
+  </head>
+  <body>
+    <div class="not-found">
+  <h2 class="title">404</h2>
+  
+  
+    <h3 class="subtitle">Prepros was unable to find the page /dontknow.png</h3>
+  
+</div>
+
+   <script data-prepros-origin-host="localhost" src="http://localhost:7879/__prepros-server__/prepros.js"> </script>
+</body>
+</html>
