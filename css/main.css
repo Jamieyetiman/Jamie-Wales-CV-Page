@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700,900");
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Love+Ya+Like+A+Sister");
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: "Love Ya Like A Sister", cursive, sans-serif, "Gloria Hallelujah", cursive, sans-serif;
   font-weight: 400;
   line-height: 1.6;
   -ms-text-size-adjust: 100%;
@@ -20,7 +21,11 @@ body {
       margin: 0 auto; }
 
 body {
-  color: #048ca8; }
+  color: black; }
+  body .unstyled-list {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
 
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em; }
@@ -31,7 +36,7 @@ h5:last-child, h6:last-child, p:last-child {
 
 h1 {
   font-size: 2rem;
-  font-weight: 300;
+  font-weight: 400;
   line-height: 1.5;
   text-transform: uppercase; }
 
@@ -45,38 +50,40 @@ p {
   font-size: 1.2rem; }
 
 .text-intro {
-  font-size: 2rem; }
+  font-family: "Gloria Hallelujah", cursive, sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
+  padding-bottom: 10rem; }
 
 .title-large {
-  font-size: 5rem;
-  font-weight: 900; }
+  padding-top: 3rem;
+  font-size: 8rem;
+  font-weight: 300; }
   .title-large span {
-    font-weight: 300; }
+    color: purple; }
 
 .main-header {
   position: absolute;
-  top: 1em;
+  top: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  padding-top: 1em; }
 
 .mylogo {
   width: 25%;
   min-width: 10rem;
   max-width: 15rem; }
 
-.main-nav {
-  display: none; }
-
 .hero {
-  background: linear-gradient(rgba(146, 114, 159, 0.85), rgba(117, 92, 128, 0.15)), url("/img/Heroimage.jpg");
+  background-image: url(/img/main.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: inherit;
-  padding-top: 20em;
-  padding-bottom: 20em;
+  padding-top: 5em;
+  padding-bottom: 4em;
   text-align: center;
-  color: white; }
+  color: black; }
   .hero .hero-img {
     display: none; }
 
@@ -85,9 +92,106 @@ p {
   display: -ms-flexbox;
   display: flex; }
 
+.main-nav {
+  background-color: #8d0085;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 100%;
+  font-size: 6rem;
+  overflow: hidden;
+  transition: all ease-in-out 300ms; }
+
+ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  height: 100vh; }
+
+li {
+  -webkit-flex-grow: 1 1 auto;
+  -ms-flex-positive: 1 1 auto;
+  flex-grow: 1 1 auto;
+  border-bottom: 1px solid white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+a {
+  color: white;
+  text-decoration: none;
+  -webkit-flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  a:hover {
+    background: rgba(0, 0, 0, 0.1); }
+
+.is-open {
+  left: 0; }
+
+.nav-toggle {
+  display: block;
+  padding: 1em;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  cursor: pointer; }
+
+.hamburger, .hamburger::before, .hamburger::after {
+  content: '';
+  display: block;
+  width: 2em;
+  height: 3px;
+  background: black;
+  transition: all ease-in-out 500ms; }
+
+.hamburger::before {
+  -webkit-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px); }
+
+.hamburger::after {
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px); }
+
+.hamburger.is-open {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
+  .hamburger.is-open::after {
+    -webkit-transform: rotate(90deg) translateX(-3px);
+    -ms-transform: rotate(90deg) translateX(-3px);
+    transform: rotate(90deg) translateX(-3px); }
+  .hamburger.is-open::before {
+    opacity: 0; }
+
 .btn {
+  font-family: "Gloria Hallelujah", cursive, sans-serif;
   display: inline-block;
-  padding: 0.75em 2.5em;
+  font-size: 1.6em;
+  padding: 1em 2.5em;
   text-transform: uppercase;
   text-decoration: none;
   margin-bottom: .6em;
@@ -97,14 +201,14 @@ p {
   border: 2px solid purple;
   color: purple; }
   .btn--primary:hover, .btn--primary:focus {
-    background: white;
-    color: purple;
+    background: purple;
+    color: white;
     border-color: purple; }
 
 .btn--secondary {
   border: 2px solid purple;
   color: purple; }
   .btn--secondary:hover, .btn--secondary:focus {
-    background: white;
-    color: purple;
-    border-color: purple; }
+    background: purple;
+    color: white;
+    border-color: white; }
