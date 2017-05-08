@@ -1,0 +1,14 @@
+.key-points {
+  padding: 10vh 0 0; }
+
+.key-point {
+  margin-bottom: 3.5em; }
+  .key-point:first-of-type {
+    margin-top: 1.5em; }
+  .key-point:last-child {
+    margin-bottom: 0; }
+  .key-point:nth-child(1) {
+    background: red; }
+  @media (min-width: 725px) {
+    .key-point:first-of-type {
+      margin-top: 0; } }

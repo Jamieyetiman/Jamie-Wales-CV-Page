@@ -1,2 +1,9 @@
-
-  
+.CTA {
+  background-image: url(/img/main.jpeg);
+  background-size: cover;
+  background-position: center;
+  padding: 2.5em;
+  position: relative; }
+  @media (min-width: 725px) {
+    .CTA {
+      padding: 10em 0; } }
